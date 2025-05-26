@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2? family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-color: #262728;
+  background-image: url(background/back1\ \(1\).jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.navbar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2.5rem;
+  background-color: #8ac6fd;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.input-button {
+  display: flex;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.input-button input {
+  padding: 0 1rem;
+  margin: 0 8px;
+  border-radius: 8px;
+  border: none;
+}
+
+.input-button button {
+  border-radius: 8px;
+  border: none;
+  padding: 1.5px;
+}
+
+#link {
+  display: none;
+}
+
+.link a {
+  color: #fff;
+  font-size: 1.4rem;
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.link a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--bg);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.link a:hover::after {
+  transform: scaleX(0.5);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+.logo h3 {
+  color: #fff;
+}
+
+.logo h3 span {
+  color: #0047fc;
+  font-style: italic;
+}
+
+.menu a {
+  color: #fff;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  color: #fff;
+}
+
+.text h3 {
+  padding: 0 16px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.text h3 span {
+  background-color: #0047fc;
+  padding: 0 1rem;
+  border-radius: 2rem;
+}
+
+/*carousel start*/
+.carousel-wrapper {
+  width: 100%;
+  text-align: center;
+  overflow-x: auto;
+  padding: 8rem 36px;
+}
+
+.carousel-container {
+  display: inline-block;
+  position: relative;
+  width: 783px;
+  height: 391px;
+  overflow: hidden;
+  border-radius: 25px;
+  box-shadow: 10px 18px #fff;
+}
+
+/* Carousel track dan gambar */
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100%;
+}
+
+.carousel-track img {
+  width: 783px;
+  height: 391px;
+  object-fit: cover;
+  flex: 0 0 auto;
+  display: block;
+}
+
+/* Tombol Navigasi */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+/*carousel end*/
+
+/*card start*/
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1px;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.card {
+  width: 200px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: white;
+  margin: 20px auto;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding-top: 1rem;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.card-button {
+  padding: 8px 16px;
+  background: #007bff;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.card-button:hover {
+  background: #0056b3;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8ac6fd;
+  color: #fff;
+  padding: 1.5rem;
+  bottom: 0;
+}
+
+.sosmed a {
+  color: #fff;
+  padding: 1rem;
+  margin: 1rem;
+  position: relative;
+}
+
+.sosmed a:hover {
+  color: #0047fc;
+}
+
+/* RESPONSIF: di bawah 768px ikuti ukuran layar */
+@media (max-width: 768px) {
+  html {
+    font-size: 75%;
+    font-weight: 900;
+  }
+
+  .carousel-wrapper {
+    padding: auto;
+  }
+
+  .carousel-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .carousel-track {
+    height: auto;
+  }
+
+  .carousel-track img {
+    width: 100%;
+    height: auto;
+  }
+
+  .carousel-btn {
+    display: none;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+  }
+
+  .card-img {
+    margin-top: 1rem;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  #link {
+    display: inline-block;
+  }
+
+  .link {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-image: url(img1/images\ \(10\).jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .link a::after {
+    transform-origin: 0 0;
+  }
+
+  .link a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .link a {
+    color: #fff;
+    display: block;
+    margin: 2rem 1.4rem;
+    padding: 1rem;
+  }
+
+  .navbar .link.active {
+    right: 0;
+  }
+
+  .input-button input {
+    padding: 0 16px;
+  }
+
+  .text h3 {
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  footer {
+    font-size: 70%;
+  }
+
+  .navbar {
+    font-size: 75%;
+  }
+}
+
+@media (max-width: 464px) {
+  html {
+    font-size: 75%;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .card {
+    width: 150px;
+  }
+}
+
+@media (max-width: 420px) {
+  html {
+    font-size: 75%;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    padding: 1rem;
+  }
+
+  .card {
+    width: 150px;
+  }
+}
+@media (max-width: 335px) {
+  html {
+    font-size: 50%;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    padding: 1rem 0.5rem;
+  }
+
+  .card {
+    width: 115px;
+  }
+
+  .navbar {
+    font-size: 65%;
+  }
+
+  footer {
+    font-size: 65%;
+  }
+}
